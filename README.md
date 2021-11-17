@@ -16,7 +16,6 @@
 - [React-router](https://reactrouter.com/web/guides/quick-start)
 - [Redux](https://redux.js.org/)
 - [redux-thunk](https://github.com/reduxjs/redux-thunk)
-- [qs library](https://github.com/ljharb/qs)
 - [JavaScript](https://developer.mozilla.org/ru/docs/Web/JavaScript)
 - [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
