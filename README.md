@@ -1,7 +1,7 @@
 # airport_project
 
 
-### [airport_project link](https://airport-board-gas.netlify.app/departures)
+### [airport_project link](https://airport-board-gas.netlify.app/)
 
 
 ### The tech stack is:
