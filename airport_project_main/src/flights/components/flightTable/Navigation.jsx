@@ -23,7 +23,7 @@ const Navigation = () => {
       </NavLink>
 
       <NavLink
-        to="/arrival"
+        to="/arrivals"
         activeclassname="active"
         className="navigation__btn"
         onClick={() => handler('arrival')}
