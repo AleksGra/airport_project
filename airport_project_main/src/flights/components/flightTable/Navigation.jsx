@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, NavLink, Outlet } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Navigation.scss';
 import { useDispatch } from 'react-redux';
 import { changeDistanation } from '../../flight.actions';

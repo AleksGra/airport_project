@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { connect, useSelector } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import './FlightTable.scss';
 import SerchForm from '../searchForm/SearchForm';
 import Navigation from './Navigation';
 import * as flightsAction from '../../flight.actions';
 import TableItem from './TableItem';
 import getListToRender from '../../renderListData';
-import { BrowserRouter } from 'react-router-dom';
 
 const FlightTable = ({ getFlights, flightsList }) => {
   const [listToRender, setListToRender] = useState([]);

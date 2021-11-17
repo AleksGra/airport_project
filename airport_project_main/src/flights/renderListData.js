@@ -72,8 +72,7 @@ const getListToRender = ({ flightsList, direction, searchText }) => {
       status: statusFull,
     };
   });
-  //   return renderList;
-  // };
+
   return searchText
     ? renderList.filter(flights =>
         flights.flightNumber.toUpperCase().includes(searchText.toUpperCase()),
