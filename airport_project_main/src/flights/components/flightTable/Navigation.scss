@@ -1,0 +1,51 @@
+i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+}
+.fa-plane-departure {
+  position: absolute;
+  font-size: 32px;
+  color: lightgrey;
+  left: 255px;
+}
+
+.fa-plane-arrival {
+  position: absolute;
+  font-size: 32px;
+  color: lightgrey;
+  left: 55px;
+}
+
+.navigation {
+  display: flex;
+  background-color: #e7efec;
+
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 90px 60px 0 0;
+    background: #1eb7ee;
+    text-transform: uppercase;
+    height: 70px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    padding: 0 110px;
+    z-index: 2;
+    transition: 0.5s;
+    border: none;
+    cursor: pointer;
+    &:nth-child(1) {
+      justify-content: flex-end;
+      margin-right: -35px;
+    }
+  }
+}
+.active {
+  background-color: #fff;
+  color: #1eb7ee;
+  z-index: 3;
+}
