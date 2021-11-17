@@ -1,9 +1,15 @@
 import React from 'react';
 import './tableItem.scss';
 
-const TableItem = props => {
-  const { term, localTime, airportName, status, name, logoSmallName, flightNumber } = props;
-
+const TableItem = ({
+  term,
+  localTime,
+  airportName,
+  status,
+  name,
+  logoSmallName,
+  flightNumber,
+}) => {
   let termColor;
 
   switch (term) {
@@ -32,8 +38,8 @@ const TableItem = props => {
         <span>{status}</span>
       </td>
       <td>
-        <div className="company-name">
-          <img className="company-logo" src={logoSmallName} alt={name} />
+        <div className='company-name'>
+          <img className='company-logo' src={logoSmallName} alt={name} />
           <span>{name}</span>
         </div>
       </td>
