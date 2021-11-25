@@ -14,8 +14,8 @@ const FlightTable = ({ getFlights, flightsList }) => {
   useEffect(() => {
     getFlights();
   }, []);
-  const direction = useSelector(state => state.destination.destination);
-  const searchText = useSelector(state => state.text.text);
+  const direction = useSelector((state) => state.destination.destination);
+  const searchText = useSelector((state) => state.text.text);
   useEffect(() => {
     setListToRender(getListToRender({ flightsList, direction, searchText }));
   }, [flightsList, direction, searchText]);
@@ -23,10 +23,10 @@ const FlightTable = ({ getFlights, flightsList }) => {
   return (
     <BrowserRouter>
       <SerchForm />
-      <section className="flights-table">
+      <section className='flights-table'>
         <Navigation />
         {listToRender.length <= 0 ? (
-          <div className="noting-found">No flights</div>
+          <div className='noting-found'>No flights</div>
         ) : (
           <table>
             <thead>
@@ -41,7 +41,7 @@ const FlightTable = ({ getFlights, flightsList }) => {
             </thead>
 
             <tbody>
-              {listToRender.map(flight => (
+              {listToRender.map((flight) => (
                 <TableItem key={flight.ID} {...flight} />
               ))}
             </tbody>
@@ -52,7 +52,7 @@ const FlightTable = ({ getFlights, flightsList }) => {
   );
 };
 
-const mapState = state => ({
+const mapState = (state) => ({
   flightsList: state.flights,
 });
 const mapDispatch = {

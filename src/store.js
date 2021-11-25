@@ -1,8 +1,10 @@
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import flightReducer from './flights/flight-reducer.js';
-import destinationReducer from './flights/changeDestination.reducer';
-import searchTextReducer from './flights/searchText.reducer';
+import {
+  searchTextReducer,
+  flightReducer,
+  destinationReducer,
+} from './flights/flight.reducer';
 
 const reducer = combineReducers({
   flights: flightReducer,

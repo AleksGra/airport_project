@@ -2,18 +2,23 @@ import moment from 'moment';
 
 const getListToRender = ({ flightsList, direction, searchText }) => {
   const currentDay = moment(new Date()).format('MM-DD');
+
   const ListByDirect = flightsList.flights[direction] || [];
 
   const filtredList =
     direction === 'arrival'
       ? ListByDirect.filter(
-          flights => moment(new Date(flights.timeArrShedule)).format('MM-DD') === currentDay,
+          (flights) =>
+            moment(new Date(flights.timeArrShedule)).format('MM-DD') ===
+            currentDay
         )
       : ListByDirect.filter(
-          flights => moment(new Date(flights.timeDepShedule)).format('MM-DD') === currentDay,
+          (flights) =>
+            moment(new Date(flights.timeDepShedule)).format('MM-DD') ===
+            currentDay
         );
 
-  const renderList = filtredList.map(flight => {
+  const renderList = filtredList.map((flight) => {
     let localTime;
     switch (direction) {
       case 'arrival':
@@ -62,7 +67,8 @@ const getListToRender = ({ flightsList, direction, searchText }) => {
 
     return {
       ID: flight.ID,
-      airportName: flight['airportToID.city_en'] || flight['airportFromID.city_en'],
+      airportName:
+        flight['airportToID.city_en'] || flight['airportFromID.city_en'],
       name,
       term: flight.term,
       logoSmallName,
@@ -74,8 +80,8 @@ const getListToRender = ({ flightsList, direction, searchText }) => {
   });
 
   return searchText
-    ? renderList.filter(flights =>
-        flights.flightNumber.toUpperCase().includes(searchText.toUpperCase()),
+    ? renderList.filter((flights) =>
+        flights.flightNumber.toUpperCase().includes(searchText.toUpperCase())
       )
     : renderList;
 };

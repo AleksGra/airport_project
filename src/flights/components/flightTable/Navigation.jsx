@@ -6,29 +6,30 @@ import { changeDistanation } from '../../flight.actions';
 
 const Navigation = () => {
   const dispatch = useDispatch();
-  const handler = dest => {
+
+  const handler = (dest) => {
     dispatch(changeDistanation(dest));
   };
 
   return (
-    <div className="navigation">
+    <div className='navigation'>
       <NavLink
-        to="/departures"
-        activeclassname="active"
-        className="navigation__btn"
+        to='/departures'
+        activeclassname='active'
+        className='navigation__btn'
         onClick={() => handler('departure')}
       >
-        <i className="fas fa-plane-departure "></i>
+        <i className='fas fa-plane-departure '></i>
         DEPARTURES
       </NavLink>
 
       <NavLink
-        to="/arrivals"
-        activeclassname="active"
-        className="navigation__btn"
+        to='/arrivals'
+        activeclassname='active'
+        className='navigation__btn'
         onClick={() => handler('arrival')}
       >
-        <i className="fas fa-plane-arrival"></i>
+        <i className='fas fa-plane-arrival'></i>
         ARRIVALS
       </NavLink>
     </div>
