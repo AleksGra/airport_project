@@ -11,11 +11,6 @@ export const flightsRecieved = (flightsList) => ({
   },
 });
 
-export const changeDistanation = (destination) => ({
-  type: CHANGE_DESTINATION,
-  payload: { destination },
-});
-
 export const takeInputText = (text) => ({
   type: TAKE_INPUT_TEXT,
   payload: {

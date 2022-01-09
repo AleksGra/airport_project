@@ -1,0 +1,29 @@
+.header {
+  &__logo {
+    display: flex;
+    width: 100vw;
+    height: 90px;
+    background-color: #1eb7ee;
+    color: #fff;
+    padding-left: 140px;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+    list-style-type: none;
+    padding-right: 35px;
+    margin-left: auto;
+  }
+}
+.header__menu-item {
+  padding-right: 70px;
+  font-size: 20px;
+  font-weight: 600;
+}
+img {
+  max-width: 180px;
+  max-height: 70px;
+}
+a:hover {
+  cursor: pointer;
+}

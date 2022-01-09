@@ -2,9 +2,7 @@ import moment from 'moment';
 
 const getListToRender = ({ flightsList, direction, searchText }) => {
   const currentDay = moment(new Date()).format('MM-DD');
-
   const ListByDirect = flightsList.flights[direction] || [];
-
   const filtredList =
     direction === 'arrival'
       ? ListByDirect.filter(

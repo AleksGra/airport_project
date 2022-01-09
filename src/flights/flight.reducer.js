@@ -1,6 +1,6 @@
 import { FLIGHTS_RECIEVED } from './flight.actions';
 import { TAKE_INPUT_TEXT } from './flight.actions';
-import { CHANGE_DESTINATION } from './flight.actions';
+
 const initialState = {
   flights: [],
 };
@@ -27,24 +27,6 @@ export const searchTextReducer = (
       return {
         ...state,
         text: action.payload.text,
-      };
-    default:
-      return state;
-  }
-};
-
-export const destinationReducer = (
-  state = {
-    destination: 'departure',
-  },
-  action
-) => {
-  switch (action.type) {
-    case CHANGE_DESTINATION:
-      return {
-        ...state,
-
-        destination: action.payload.destination,
       };
     default:
       return state;

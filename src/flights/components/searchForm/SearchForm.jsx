@@ -6,29 +6,40 @@ import { takeInputText } from '../../flight.actions';
 const SearchForm = () => {
   const [inputData, setInputData] = useState('');
 
-  const handelChange = event => setInputData(event.target.value);
+  const handelChange = (event) => setInputData(event.target.value);
   const dispatch = useDispatch();
 
-  const handler = e => {
+  const btnRef = React.createRef();
+  const handleKeyPress = (event) => {
+    if (event.keyCode == 13) {
+      btnRef.current.click();
+    }
+  };
+  const handler = (e) => {
     e.preventDefault();
     dispatch(takeInputText(inputData));
   };
 
   return (
-    <div className="search-flights">
-      <h2 className="title">SEARCH FLIGHT</h2>
-      <div className="search-line-container">
-        <form className="search-form" name="searchFlightForm">
-          <i className="fas fa-search"></i>
+    <div className='search-flights'>
+      <h2 className='title'>SEARCH FLIGHT</h2>
+      <div className='search-line-container'>
+        <form
+          className='search-form'
+          name='searchFlightForm'
+          onSubmit={handler}
+        >
+          <i className='fas fa-search'></i>
           <input
-            className="search-form__input"
-            type="text"
-            placeholder="Flight #"
+            className='search-form__input'
+            type='text'
+            placeholder='Flight #'
             onChange={handelChange}
             value={inputData}
+            onKeyPress={handleKeyPress}
           ></input>
 
-          <button className="search-form__btn" type="submit" onClick={handler}>
+          <button className='search-form__btn' type='submit' ref={btnRef}>
             SEARCH
           </button>
         </form>

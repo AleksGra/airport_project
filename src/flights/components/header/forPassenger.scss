@@ -1,0 +1,25 @@
+.container {
+  position: absolute;
+  background-color: #fdfdfd;
+  z-index: 7;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  &:hover {
+    box-shadow: 0 0 10px #000;
+  }
+}
+
+.forPassenger_list {
+  color: #1eb7ee;
+  list-style-type: none;
+  padding: 5px;
+  font-weight: 400;
+}
+.forPassenger__items {
+  padding: 5px;
+  &:hover {
+    box-shadow: 0 0 10px #1eb7ee;
+    border-radius: 30px;
+  }
+}

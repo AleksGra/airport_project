@@ -1,14 +1,9 @@
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import {
-  searchTextReducer,
-  flightReducer,
-  destinationReducer,
-} from './flights/flight.reducer';
+import { searchTextReducer, flightReducer } from './flights/flight.reducer';
 
 const reducer = combineReducers({
   flights: flightReducer,
-  destination: destinationReducer,
   text: searchTextReducer,
 });
 // eslint-disable-next-line no-underscore-dangle
